@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Auth from "./component/Auth.tsx";
-import Home from "./component/Home.tsx";
-import AddTodo from "./component/AddTodo.tsx";
+import App from "./App.tsx";
+
 const router = createBrowserRouter([
   {
     path: "/auth",
@@ -13,11 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/addtodo",
-    element: <AddTodo />,
+    element: <App />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

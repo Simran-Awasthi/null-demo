@@ -1,4 +1,3 @@
-import React from "react";
 import { auth, googleProvider } from "../firebase";
 import styled from "@emotion/styled";
 import { UserCredential, signInWithPopup } from "firebase/auth";
@@ -7,7 +6,7 @@ import useUserStore from "../store";
 
 const Button = styled.button`
   padding: 12px;
-  background-color: #00d2ff;
+  background-color: black;
   font-size: 14px;
   display: flex;
   color: white;
@@ -18,8 +17,9 @@ const Button = styled.button`
   border: none;
   outline: none;
   font-weight: bold;
+  transition: transform 200ms ease-in;
   &:hover {
-    color: white;
+    transform: scale(110%);
   }
 `;
 const Container = styled.div`
@@ -44,7 +44,7 @@ const Auth = () => {
     console.log(userCred);
     if (userCred != null) {
       userStore.setUser(userCred.user);
-      navigate("/");
+      navigate("/", { replace: true });
     }
   };
   return (

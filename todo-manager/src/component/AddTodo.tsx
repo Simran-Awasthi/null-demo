@@ -1,15 +1,8 @@
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import React, { useState } from "react";
+import { useState } from "react";
 import { v4 } from "uuid";
-import {
-  FaCheckSquare,
-  FaCheck,
-  FaTrash,
-  FaSquare,
-  FaPenSquare,
-  FaEdit,
-} from "react-icons/fa";
+import { FaCheckSquare, FaTrash, FaSquare, FaEdit } from "react-icons/fa";
 
 const MainDiv = styled.div`
   display: flex;
